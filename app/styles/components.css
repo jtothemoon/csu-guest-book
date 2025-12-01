@@ -1,0 +1,47 @@
+/* ==============================================
+   Components Design System
+   방명록 프로젝트 컴포넌트 스타일
+   ============================================== */
+
+/* --------------------------------------------
+   Font Import - 빙그레따옴체
+   -------------------------------------------- */
+@font-face {
+  font-family: 'Binggrae Taom';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* --------------------------------------------
+   Logo Component
+   - 조선대학교 로고 + 텍스트
+   -------------------------------------------- */
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: var(--spacing-4);
+  height: 36px;
+}
+
+.logo-image {
+  width: 36px;
+  height: 36px;
+}
+
+.logo-text {
+  font-family: 'Binggrae Taom', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--primary-blue);
+}
+
+/* --------------------------------------------
+   Input Component
+   -------------------------------------------- */
+input::placeholder {
+  color: var(--gray-02);
+}

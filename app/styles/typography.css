@@ -1,0 +1,63 @@
+/* ==============================================
+   Typography Design System
+   방명록 프로젝트 타이포그래피 시스템
+   ============================================== */
+
+/* --------------------------------------------
+   Font Import
+   - Pretendard 웹폰트 CDN
+   -------------------------------------------- */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  /* --------------------------------------------
+     Font Family
+     -------------------------------------------- */
+  --font-pretendard: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* --------------------------------------------
+     Font Weights
+     -------------------------------------------- */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /* --------------------------------------------
+     Font Sizes
+     -------------------------------------------- */
+  --text-12: 12px;
+  --text-14: 14px;
+  --text-16: 16px;
+}
+
+/* --------------------------------------------
+   Typography Classes
+   -------------------------------------------- */
+
+/* Title1 - Pretendard Semibold 16px */
+.title1 {
+  font-family: var(--font-pretendard);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-16);
+}
+
+/* Title2 - Pretendard Medium 14px */
+.title2 {
+  font-family: var(--font-pretendard);
+  font-weight: var(--font-medium);
+  font-size: var(--text-14);
+}
+
+/* Body - Pretendard Regular 14px */
+.body {
+  font-family: var(--font-pretendard);
+  font-weight: var(--font-regular);
+  font-size: var(--text-14);
+}
+
+/* Caption - Pretendard Regular 12px */
+.caption {
+  font-family: var(--font-pretendard);
+  font-weight: var(--font-regular);
+  font-size: var(--text-12);
+}
