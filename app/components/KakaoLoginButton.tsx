@@ -1,16 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import { signInWithKakao } from '@/lib/auth';
 
 export default function KakaoLoginButton() {
-  const handleLogin = () => {
-    // TODO: Supabase 카카오 로그인 연동
-  };
-
   return (
-    <button
-      onClick={handleLogin}
-      style={{
+    <form action={signInWithKakao}>
+      <button
+        type="submit"
+        style={{
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
@@ -28,6 +26,7 @@ export default function KakaoLoginButton() {
         alt="카카오"
         width={18}
         height={18}
+        style={{ width: '18px', height: '18px' }}
       />
       <span
         className="title2"
@@ -35,6 +34,7 @@ export default function KakaoLoginButton() {
       >
         로그인
       </span>
-    </button>
+      </button>
+    </form>
   );
 }
