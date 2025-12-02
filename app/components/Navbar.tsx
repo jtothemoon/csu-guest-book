@@ -30,7 +30,7 @@ export default function Navbar({
       {/* 로고 */}
       <div className="logo">
         <Image
-          src="/logo.png"
+          src="/logo.svg"
           alt="조선대학교"
           width={36}
           height={36}
