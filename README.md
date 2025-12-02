@@ -104,13 +104,20 @@ guest-book/
 - Node.js 20.x 이상
 - npm 또는 yarn
 
-### 1. 저장소 클론
+### 1. 저장소 클론 및 자기 GitHub에 푸시
 
 ```bash
-git clone https://github.com/your-username/guest-book.git
-cd guest-book
+# 저장소 클론
+git clone https://github.com/jtothemoon/csu-guest-book.git
+cd csu-guest-book
 npm install
+
+# 자기 GitHub에 새 저장소 생성 후 remote 변경
+git remote set-url origin https://github.com/YOUR_USERNAME/csu-guest-book.git
+git push -u origin master
 ```
+
+> GitHub에서 먼저 `csu-guest-book` 이름으로 빈 저장소를 생성하세요 (README 체크 해제)
 
 ### 2. Supabase 설정
 
@@ -221,16 +228,14 @@ http://localhost:3000 접속
 #### 3. 배포
 **Deploy** 클릭
 
-#### 4. 배포 후 설정 업데이트
+#### 4. 배포 후 Supabase 설정 업데이트
 
 배포 완료 후 Vercel URL을 확인하고:
 
-**카카오 개발자**:
-- 플랫폼 → Web → 사이트 도메인 추가: `https://your-app.vercel.app`
-- 카카오 로그인 → Redirect URI는 Supabase URL이므로 변경 불필요
-
 **Supabase**:
-- Authentication → URL Configuration → Site URL: `https://your-app.vercel.app`
+- **Authentication** → **URL Configuration** → **Site URL**: `https://your-app.vercel.app`
+
+> 카카오 Redirect URI는 Supabase URL이므로 별도 설정 불필요
 
 ## 📚 API 문서
 

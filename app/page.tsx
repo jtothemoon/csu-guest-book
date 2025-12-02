@@ -79,7 +79,7 @@ export default function Home() {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        minHeight: '100dvh',
         maxWidth: '375px',
         margin: '0 auto',
         background: 'var(--gray-00)',
@@ -121,7 +121,7 @@ export default function Home() {
           <Navbar
             isLoggedIn={!!user}
             userName={user?.user_metadata?.name || user?.user_metadata?.full_name || ''}
-            profileImage={user?.user_metadata?.avatar_url || user?.user_metadata?.picture || '/profile-default.png'}
+            profileImage={user?.user_metadata?.avatar_url || user?.user_metadata?.picture || '/profile-default.svg'}
           />
         </div>
 
@@ -231,7 +231,20 @@ export default function Home() {
           zIndex: 2,
         }}
       >
-        <GuestbookForm onSubmit={handleSubmit} />
+        {user ? (
+          <GuestbookForm onSubmit={handleSubmit} />
+        ) : (
+          <p
+            className="body"
+            style={{
+              textAlign: 'center',
+              color: 'var(--gray-02)',
+              padding: '12px 0',
+            }}
+          >
+            로그인 후 방명록을 작성할 수 있어요
+          </p>
+        )}
       </div>
     </div>
   );

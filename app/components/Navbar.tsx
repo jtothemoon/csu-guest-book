@@ -13,7 +13,7 @@ interface NavbarProps {
 export default function Navbar({
   isLoggedIn = false,
   userName = '',
-  profileImage = '/profile-default.png',
+  profileImage = '/profile-default.svg',
 }: NavbarProps) {
   return (
     <nav
