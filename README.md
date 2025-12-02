@@ -112,12 +112,30 @@ git clone https://github.com/jtothemoon/csu-guest-book.git
 cd csu-guest-book
 npm install
 
-# 자기 GitHub에 새 저장소 생성 후 remote 변경
-git remote set-url origin https://github.com/YOUR_USERNAME/csu-guest-book.git
-git push -u origin master
+# 기존 remote 삭제 후 자기 저장소 연결
+git remote remove origin
+git remote add origin https://github.com/YOUR_USERNAME/csu-guest-book.git
+git push -u origin main
 ```
 
 > GitHub에서 먼저 `csu-guest-book` 이름으로 빈 저장소를 생성하세요 (README 체크 해제)
+
+#### (선택) 커밋 히스토리 초기화
+
+깨끗한 상태로 시작하고 싶다면:
+
+```bash
+# .git 삭제 후 새로 시작
+rm -rf .git
+git init
+git add .
+git commit -m "init: 프로젝트 초기화"
+
+# 자기 저장소 연결 후 push
+git remote add origin https://github.com/YOUR_USERNAME/csu-guest-book.git
+git branch -M main
+git push -u origin main
+```
 
 ### 2. Supabase 설정
 
